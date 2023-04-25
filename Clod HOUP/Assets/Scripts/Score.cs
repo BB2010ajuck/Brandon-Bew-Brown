@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
     int score;
     public Text scoreText;
     public List<GameObject> platformsHit;
-
+    
     void Start()
     {
         scoreText.text = "SCORE: " + score.ToString();

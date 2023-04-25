@@ -15,8 +15,8 @@ public class Jump : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (rigidbody.velocity.y > -.01 && rigidbody.velocity.y < .01)
+    { 
+        if (rigidbody.velocity.y > -.01 && rigidbody.velocity.y < 0.01)
         {
             canJump = true;
         }
