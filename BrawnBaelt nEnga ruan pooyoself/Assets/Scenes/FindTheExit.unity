@@ -145,6 +145,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77aeb367eb084c4b8b7031ce7297529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &74602102
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74602095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.18, y: 2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &81725565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0b09329add2288e46af3ab00bb4d1cc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.888
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0b09329add2288e46af3ab00bb4d1cc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -280,6 +293,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9bfa90ca525224048ac7a0384f83dd6d, type: 2}
     - target: {fileID: -927199367670048503, guid: 0b09329add2288e46af3ab00bb4d1cc2, type: 3}
       propertyPath: m_Name
+      value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0b09329add2288e46af3ab00bb4d1cc2, type: 3}
+      propertyPath: m_TagString
       value: coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -386,6 +403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gem
       objectReference: {fileID: 0}
+    - target: {fileID: 748992279688134215, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 748992279688134217, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -466,7 +487,8 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.95453346
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 748992279688134215, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 050efd230c4094246b4f2c6039b362e7, type: 3}
 --- !u!1 &144358436 stripped
 GameObject:
@@ -3041,6 +3063,7 @@ GameObject:
   - component: {fileID: 1284053621}
   - component: {fileID: 1284053619}
   - component: {fileID: 1284053623}
+  - component: {fileID: 1284053624}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3119,6 +3142,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1892903568}
+--- !u!114 &1284053624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284053618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb45b97ae405184aa7ddcaf669c9d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 1268341939}
+  coin: {fileID: 74602095}
 --- !u!1 &1294329856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 1a3e3b7e3e65ab74b85d4b467c829b59, type: 3}
@@ -5287,7 +5324,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &2030947155
 Canvas:
   m_ObjectHideFlags: 0
@@ -6250,7 +6287,7 @@ GameObject:
   - component: {fileID: 7520121438660743011}
   - component: {fileID: 2895836570380660515}
   - component: {fileID: 2895836570380660516}
-  - component: {fileID: 7520121438660743012}
+  - component: {fileID: 7520121438660743013}
   m_Layer: 0
   m_Name: Codey
   m_TagString: Untagged
@@ -7337,7 +7374,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7520121438660743012
+--- !u!114 &7520121438660743013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7349,7 +7386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb45b97ae405184aa7ddcaf669c9d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pickup: {fileID: 0}
+  door: {fileID: 1268341939}
+  coin: {fileID: 74602095}
 --- !u!4 &7603339309757305056
 Transform:
   m_ObjectHideFlags: 0

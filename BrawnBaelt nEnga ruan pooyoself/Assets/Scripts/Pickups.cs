@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Pickups : MonoBehaviour
 {
-    public ParticleSystem Pickup;
+    public GameObject door;
+    public GameObject coin;
+    
 
     void Start()
     {
@@ -16,6 +18,7 @@ public class Pickups : MonoBehaviour
     {
         if (other.gameObject.CompareTag("coin"))
         {
+            Destroy(door.gameObject);
             Destroy(other.gameObject);
         }
     }
