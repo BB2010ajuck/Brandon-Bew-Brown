@@ -7,7 +7,7 @@ public class LaserSwitch : MonoBehaviour
     private GameObject switchIcon;
     private AudioSource playBeep;
 
-
+    public bool LasersAreOff = false;
 
     private void Start()
     {
@@ -22,6 +22,7 @@ public class LaserSwitch : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         playBeep.Play();
+        LasersAreOff = true;
     }
 
     public void OnTriggerStay(Collider other)

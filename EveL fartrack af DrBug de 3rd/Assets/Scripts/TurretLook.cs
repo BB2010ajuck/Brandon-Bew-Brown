@@ -7,6 +7,7 @@ public class TurretLook : MonoBehaviour
     public Transform player;
     private LaserSwitch laserSwitch;
     private GameObject laser;
+    public bool LasersAreOff = false;
 
     private void Start()
     {
@@ -16,6 +17,11 @@ public class TurretLook : MonoBehaviour
 
     void Update() 
     {
+        if (laserSwitch.LasersAreOff)
+        {
+            laser.SetActive(false);
+            return;
+        }
         transform.LookAt(player);
     }
 }

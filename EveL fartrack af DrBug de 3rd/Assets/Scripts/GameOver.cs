@@ -46,7 +46,8 @@ public class GameOver : MonoBehaviour
 
         if (playerTouchedLaser)
         {
-            RestartLevel();
+            Invoke("RestartLevel", 5);
+            animator.SetTrigger("PlayerHit");
         }
     }
 
