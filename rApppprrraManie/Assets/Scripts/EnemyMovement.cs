@@ -54,6 +54,11 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (transform.position.y >= 5)
+        {
+            
+            enemyRigidBody.AddForce(Vector2.down * yForce);
+        }
         if (transform.position.x <= -8)
         {
             xDirection = 1;
