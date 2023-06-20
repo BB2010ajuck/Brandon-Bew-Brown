@@ -1381,10 +1381,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c5f6a0d4cad2b4dbd8ac79211ad02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  attackingDistance: 1
-  direction: {x: 0, y: 0, z: 0}
+  speed: 1
+  attackingDistance: 0.7
+  direction: {x: 1.499553, y: 0, z: -3.75144}
   isFollowingTarget: 0
+  isAttackingTarget: 1
   currentAttackingTime: 2
   maxAttackingTime: 2
 --- !u!1 &3537918723572985119
