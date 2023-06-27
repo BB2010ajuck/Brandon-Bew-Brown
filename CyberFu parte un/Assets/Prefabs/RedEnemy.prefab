@@ -1383,8 +1383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   attackingDistance: 0.7
-  direction: {x: 1.499553, y: 0, z: -3.75144}
-  isFollowingTarget: 0
+  direction: {x: 0, y: 0, z: 0}
+  isFollowingTarget: 1
   isAttackingTarget: 1
   currentAttackingTime: 2
   maxAttackingTime: 2
