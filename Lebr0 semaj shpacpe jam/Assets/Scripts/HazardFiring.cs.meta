@@ -4,8 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - hazard: {fileID: 5641337385475059697, guid: c1f1cc11f76465645bae2eb8590ecf1e,
-      type: 3}
+  - hazard: {fileID: 5641337385475059697, guid: c1f1cc11f76465645bae2eb8590ecf1e, type: 3}
   - player: {instanceID: 0}
   - hazardSpawn: {instanceID: 0}
   executionOrder: 0

@@ -37,7 +37,13 @@ public class EnemyEmitterController : MonoBehaviour
             |**** Add your code below ****|
             \*****************************/
 
-
+            for (int i = 0; i < playerController.currentLevel; i++)
+            {
+                float randomX = Random.Range(-6.0f, 6.0f);
+                Vector3 enemyPosition = new Vector3(randomX, 6, 0);
+                transform.position = enemyPosition;
+                Instantiate(Enemy, transform.position, transform.rotation);
+            }
 
             /*****************************\
             |**** Add your code above ****|
