@@ -17,7 +17,7 @@ public class PlayerControls : MonoBehaviour
     public float projectileForce;
     public float fireRate;
     public int currentLevel;
-    private float nextFire;
+    private float nextFire; 
     
     // playerHealth and score are specifically for the corresponding text objects, 
     //gameOver is used as a null condition
@@ -83,13 +83,30 @@ public class PlayerControls : MonoBehaviour
             |**** Add your code below ****|
             \*****************************/
 
+            //if currentLevel = to 3 and 4
+
+            //if (currentLevel == 3 && currentLevel == 4);
+
             Instantiate(projectile, transform.position, transform.rotation);
-            if (currentLevel >= 3)
+            if (currentLevel >= 3 && currentLevel < 5)
             {
                 Vector3 rightOffset = new Vector3(0.2f, 0, 0);
                 Vector3 leftOffset = new Vector3(-0.2f, 0, 0);
                 Instantiate(projectile, transform.position + rightOffset, transform.rotation);
                 Instantiate(projectile, transform.position + leftOffset, transform.rotation);
+            }
+
+            if (currentLevel >= 5)
+            {
+                Vector3 rightOffset = new Vector3(0.2f, 0, 0);
+                Vector3 leftOffset = new Vector3(-0.2f, 0, 0);
+                Vector3 upOffset = new Vector3(0.1f, 0.2f, 0);
+                Vector3 downOffset = new Vector3(-0.1f, 0.2f, 0);
+                Instantiate(projectile, transform.position + rightOffset, transform.rotation);
+                Instantiate(projectile, transform.position + leftOffset, transform.rotation);
+                Instantiate(projectile, transform.position + upOffset, transform.rotation);
+                Instantiate(projectile, transform.position + downOffset, transform.rotation);
+
             }
 
             /*****************************\
