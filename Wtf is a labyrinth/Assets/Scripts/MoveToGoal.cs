@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class MoveToGoal : MonoBehaviour
 {
     public Transform goal;
+    public Transform lol;
     private Animator animator;
     private NavMeshAgent agent;
     // Start is called before the first frame update
@@ -13,7 +14,8 @@ public class MoveToGoal : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+        agent.destination = lol.position;
+
     }
 
     // Update is called once per frame
@@ -26,6 +28,15 @@ public class MoveToGoal : MonoBehaviour
         else
         {
             animator.SetBool("IsRunning", false);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("lol"))
+        {
+            Destroy(other.gameObject);
+            agent.destination = goal.position;
         }
     }
 }
