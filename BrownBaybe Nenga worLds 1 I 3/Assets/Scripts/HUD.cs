@@ -30,5 +30,15 @@ public class HUD : MonoBehaviour
         }
     }
 
+    public void HealPlayer()
+    {
+        Debug.Log("Only baby's say Yay!");
+        if (lives < 3)
+        {
+            hearts[lives].SetActive(true);
+            lives += 1;
+        }
+    }
+
     
 }
