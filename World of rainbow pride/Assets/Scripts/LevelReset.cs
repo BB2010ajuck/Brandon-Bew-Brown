@@ -7,11 +7,17 @@ public class LevelReset : MonoBehaviour
 {
     public GameObject player;
     public ParticleSystem explosion;
+    public GameObject GameOverScreen;
+    public GameObject obstacleGenerator;
+    public GameObject trail;
     public void GameOver()
     {
         player.SetActive(false);
         Invoke("Reload", 2);
         explosion.Play();
+        GameOverScreen.SetActive(true);
+        obstacleGenerator.SetActive(false);
+        trail.SetActive(false);
     }
 
     void Reload()
