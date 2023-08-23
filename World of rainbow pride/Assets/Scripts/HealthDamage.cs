@@ -34,22 +34,6 @@ public class HealthDamage : MonoBehaviour
     }
     void OnTriggerEnter2D (Collider2D other)
     {
-        
-        for (int i = 0; i < plats.Length -1; i++)
-        {
-            if (i == 0)
-            {
-                plats[i] = GameObject.FindWithTag("yellow");
-            }
-            if (i == 1)
-            {
-                plats[i] = GameObject.FindWithTag("pink");
-            }
-            if (i == 2)
-            {
-                plats[i] = GameObject.FindWithTag("blue");
-            }
-        }
         touchingObstacle = true;
 
         //if square player
