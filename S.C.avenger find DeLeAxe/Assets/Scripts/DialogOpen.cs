@@ -33,20 +33,21 @@ public class DialogOpen : MonoBehaviour
     {
         if (!begin && pHolding.Verify())
         {
-            checkClue();
+            end = true;
         }
         greeting.Play(0);
+        interfaceManager.GetComponent<InterfaceManager>().ShowBox(dialog, clue);
     }
 
     private void checkClue()
     {
         if (pHolding.holdValue == clue)
         {
-            end = true;
+            dialog = "You found my " + collectibles[clue] + "! Yeppie!";
         }
         else
         {
-
+            dialog = "No that's not my " + collectibles[clue] + "MAFAKA👿👿👿";
         }
     }
 
@@ -55,6 +56,9 @@ public class DialogOpen : MonoBehaviour
         begin = false;
     }
 
-    public 
+    public void searchDialog()
+    {
+        dialog = "Hi! Can you help me find my " + collectibles[clue] + "?";
+    }
 
 }
