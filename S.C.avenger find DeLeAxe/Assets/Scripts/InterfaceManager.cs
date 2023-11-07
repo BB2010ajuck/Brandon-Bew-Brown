@@ -8,7 +8,7 @@ using TMPro;
 public class InterfaceManager : MonoBehaviour
 {
     public GameObject dialogBox;
-    public TextMeshPro dialogText;
+    public TMP_Text dialogText;
     public Image seekImage;
     public GameObject npc;
     public GameObject randomSpawn;

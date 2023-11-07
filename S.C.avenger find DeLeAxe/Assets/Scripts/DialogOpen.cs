@@ -19,10 +19,9 @@ public class DialogOpen : MonoBehaviour
     void Start()
     {
         greeting = GetComponent<AudioSource>();
-        collectibles = new string[] { "film", "balloons", "life saver", "bull's eye", "pipe", "key", "fish", "birdhouse", "red airhorn", "magic hat" };
+        collectibles = new string[] { "Tv", "coloured circles", "Floatie", "target", "Big pipe", "Ip adress", "Nemo", "Fly Animal House", "red PPhorn", "magical hat" };
         createClue();
     }
-
     public void createClue()
     {
         clue = Random.Range(0, 9);
@@ -33,7 +32,7 @@ public class DialogOpen : MonoBehaviour
     {
         if (!begin && pHolding.Verify())
         {
-            end = true;
+            checkClue();
         }
         greeting.Play(0);
         interfaceManager.GetComponent<InterfaceManager>().ShowBox(dialog, clue);
@@ -43,11 +42,12 @@ public class DialogOpen : MonoBehaviour
     {
         if (pHolding.holdValue == clue)
         {
-            dialog = "You found my " + collectibles[clue] + "! Yeppie!";
+            dialog = "You found my " + collectibles[clue] + ", me give you COEMS";
+            end = true;
         }
         else
         {
-            dialog = "No that's not my " + collectibles[clue] + "MAFAKA👿👿👿";
+            dialog = "No that's not my " + collectibles[clue] + " MAFAKA";
         }
     }
 
